@@ -28,6 +28,9 @@ Route::get('cargar_lote/{punto}','LoteController@cargar_lote');
 //seccion
 Route::get('seccion1','LoteController@seccion1');
 
+
+Route::get('seccion1_reserva','LoteController@seccion1_reserva');
+
 //manzano
 Route::resource('manzano','ManzanoController');
 Route::get('cargar_manzano/{id}','ManzanoController@cargar_manzano');
