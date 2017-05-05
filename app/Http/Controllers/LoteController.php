@@ -51,6 +51,7 @@ class LoteController extends Controller {
     }
 
     public function update(Request $request) {
+        
         $verificar=DB::select("SELECT COUNT(*)as contador from lote WHERE id_manzano=".$request['id_manzano_ac']." AND nro_lote=".$request['nro_lote_ac']);
         if ($verificar[0]->contador == 1) {
             if ($request['superficie_ac'] == $request['superficie_aux']) {
