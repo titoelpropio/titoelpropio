@@ -15,6 +15,9 @@ $(document).ready(function(){
 
       if ($(lote).attr('data-status')=='4') {
         point=$(lote);
+
+        $('#btnAgregar').attr('disabled',false);
+        $('#btnActualizar').attr('disabled',true);
     
          punto=$(lote).attr('points');
          if (lotes=="") {
@@ -40,14 +43,20 @@ $(document).ready(function(){
             lotes.style.fill = "#ef3939";
             lote.style.fill = "#0195bf";
            }
+           
         }
 
         lotes = lote;
+
+        
     
       }
 
       if ($(lote).attr('data-status')=='0') {
         point=$(lote);
+
+        $('#btnAgregar').attr('disabled',true);
+        $('#btnActualizar').attr('disabled',false);
     
          punto=$(lote).attr('points');
          if (lotes=="") {
@@ -75,6 +84,7 @@ $(document).ready(function(){
         }
 
         lotes = lote;
+        
     
       }
 
@@ -82,6 +92,7 @@ $(document).ready(function(){
 
 function cargardatos(){
   $("#punto").val(punto.trim());
+
 }
 
 function CargarDatosACtualizar(){

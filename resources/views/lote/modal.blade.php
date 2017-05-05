@@ -1,3 +1,5 @@
+
+<!-- modal guardar -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -5,10 +7,9 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 id="titulogalpon" class="modal-title" >REGISTRAR LOTE</h4>
       </div>
-
       <div class="modal-body">
       {!!Form::open(['route'=>'lote.store', 'method'=>'POST'])!!}
-      <input type="text" name="punto" id="punto">
+      <input type="text" name="punto" id="punto" hidden>
 
 <div class="form-group">
     {!!Form::label('nro_lote','Nro Lote:')!!}
@@ -43,6 +44,9 @@
   </div>
 </div>
 
+
+
+<!-- modal editar -->
 
 
 <div class="modal fade" id="myModalActualizar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
