@@ -21,13 +21,59 @@ $(document).ready(function(){
             lote.style.fill = "#0195bf"; 
          }
          else{
-        if (lote != lotes && lotes != "") {
+
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='4') {
             lotes.style.fill = "#f49e25";
             lote.style.fill = "#0195bf";
            }
+
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='0') {
+            lotes.style.fill = "#85f793";
+            lote.style.fill = "#0195bf";
+           }
+
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='1') {
+            lotes.style.fill = "#efe139";
+            lote.style.fill = "#0195bf";
+           }
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='2') {
+            lotes.style.fill = "#ef3939";
+            lote.style.fill = "#0195bf";
+           }
         }
-     
+
+        lotes = lote;
     
+      }
+
+      if ($(lote).attr('data-status')=='0') {
+        point=$(lote);
+    
+         punto=$(lote).attr('points');
+         if (lotes=="") {
+            lote.style.fill = "#0195bf"; 
+         }
+         else{
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='4') {
+            lotes.style.fill = "#f49e25";
+            lote.style.fill = "#0195bf";
+           }
+
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='0') {
+            lotes.style.fill = "#85f793";
+            lote.style.fill = "#0195bf";
+           }
+
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='1') {
+            lotes.style.fill = "#efe139";
+            lote.style.fill = "#0195bf";
+           }
+           if (lote != lotes && lotes != "" && $(lotes).attr('data-status')=='2') {
+            lotes.style.fill = "#ef3939";
+            lote.style.fill = "#0195bf";
+           }
+        }
+
         lotes = lote;
     
       }
